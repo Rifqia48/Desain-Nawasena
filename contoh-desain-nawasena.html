@@ -1,0 +1,1335 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Palet & Aturan Penggunaan Warna - Nawasena Nusantara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      --t-gradient: linear-gradient(135deg, #071224 0%, #0B1B33 45%, #182C4A 75%, #6B151C 100%);
+      --t-primary: #0B1B33;
+      --t-secondary: #871F27;
+      --t-accent: #E5A93C;
+      --t-tint: #FAF8F5;
+      --t-tint-border: #E8E2D6;
+      --t-badge-bg: rgba(229, 169, 60, 0.25);
+      --t-badge-text: #F8D58B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background-color: #f1f5f9;
+      color: #1e293b;
+      padding: 36px 16px;
+      line-height: 1.6;
+      font-size: 13.5px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .selector-bar {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+    .selector-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .selector-head h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #64748B;
+      font-family: var(--font-display);
+    }
+    .active-badge-status {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--t-primary);
+    }
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .theme-tab-btn {
+      appearance: none;
+      background: #ffffff;
+      border: 1px solid #CBD5E1;
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s ease;
+      color: #334155;
+    }
+    .theme-tab-btn:hover {
+      border-color: #94A3B8;
+      background: #F8FAFC;
+    }
+    .theme-tab-btn.active {
+      background: #0B1B33;
+      border-color: #0B1B33;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(11, 27, 51, 0.25);
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .master-banner {
+      background: var(--t-gradient);
+      border-radius: 20px;
+      color: #ffffff;
+      padding: 34px 38px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.14);
+      margin-bottom: 26px;
+      transition: background 0.3s ease;
+    }
+    .banner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--t-badge-bg);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: var(--t-badge-text);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .banner-title {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .banner-desc {
+      font-size: 14.5px;
+      color: #E2E8F0;
+      max-width: 760px;
+      line-height: 1.6;
+    }
+
+    .panel {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 26px 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .panel-head {
+      margin-bottom: 20px;
+    }
+    .panel-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .panel-sub {
+      font-size: 12.5px;
+      color: #64748B;
+      margin-top: 3px;
+    }
+    .swatches-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 800px) {
+      .swatches-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .swatches-grid { grid-template-columns: 1fr; }
+    }
+
+    .swatch-card {
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+    .swatch-color-box {
+      height: 86px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .swatch-tag {
+      align-self: flex-start;
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .swatch-body {
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .swatch-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: #0F172A;
+    }
+    .swatch-code {
+      font-family: monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+    }
+    .swatch-cmyk {
+      font-size: 10.5px;
+      color: #94A3B8;
+    }
+    .swatch-phil {
+      font-size: 11.5px;
+      color: #64748B;
+      line-height: 1.45;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed #E2E8F0;
+    }
+
+    .ratio-wrapper {
+      padding: 16px 20px;
+      background: var(--t-tint);
+      border: 1px solid var(--t-tint-border);
+      border-radius: 14px;
+    }
+    .ratio-bar {
+      height: 16px;
+      border-radius: 99px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+    }
+    .ratio-seg {
+      height: 100%;
+    }
+    .ratio-legend-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+    }
+    .ratio-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ratio-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 740px) {
+      .rules-grid { grid-template-columns: 1fr; }
+    }
+
+    .rule-box {
+      border-radius: 14px;
+      padding: 18px 20px;
+      font-size: 12.5px;
+    }
+    .rule-box-do {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+    }
+    .rule-box-dont {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+    }
+    .rule-box-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rule-box-do .rule-box-title { color: #166534; }
+    .rule-box-dont .rule-box-title { color: #991B1B; }
+
+    .rule-list {
+      list-style: none;
+    }
+    .rule-list li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.5;
+    }
+    .rule-box-do .rule-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+      color: #16A34A;
+    }
+    .rule-box-dont .rule-list li::before {
+      content: "✕";
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+      color: #DC2626;
+    }
+
+    .app-guidelines-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 820px) {
+      .app-guidelines-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .app-guidelines-grid { grid-template-columns: 1fr; }
+    }
+
+    .app-item {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .app-item-title {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .app-item-desc {
+      font-size: 11.5px;
+      color: #64748B;
+      line-height: 1.45;
+    }
+
+    /* 9 MOCKUPS GRID */
+    .mockups-grid-9 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 980px) {
+      .mockups-grid-9 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .mockups-grid-9 { grid-template-columns: 1fr; }
+    }
+
+    .mockup-item {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .mockup-top-bar {
+      padding: 10px 14px;
+      background: #F8FAFC;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mockup-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0B1B33;
+    }
+    .mockup-format {
+      font-size: 10px;
+      font-family: monospace;
+      background: #EDF2F7;
+      padding: 2px 7px;
+      border-radius: 4px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .mockup-preview-zone {
+      padding: 18px 14px;
+      background: #EBF1F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+    }
+    .mockup-info {
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex-grow: 1;
+    }
+    .mockup-name {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .mockup-role-desc {
+      font-size: 11.5px;
+      color: #64748B;
+      line-height: 1.45;
+    }
+    .mockup-chips {
+      display: flex;
+      gap: 5px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="selector-bar">
+      <div class="selector-head">
+        <h2>Pilih Palet Proyek Kepemimpinan</h2>
+        <span class="active-badge-status" id="label-active-status">Tema: Nawasena Nusantara (Induk)</span>
+      </div>
+      <div class="btn-group">
+        <button class="theme-tab-btn active" data-theme="master" onclick="selectTheme('master', this)">
+          <span class="dot" style="background:#0B1B33;"></span> ⭐ Master Nusantara (Induk)
+        </button>
+        <button class="theme-tab-btn" data-theme="lestari" onclick="selectTheme('lestari', this)">
+          <span class="dot" style="background:#1B5E43;"></span> 1. Lestari (Lingkungan)
+        </button>
+        <button class="theme-tab-btn" data-theme="budaya" onclick="selectTheme('budaya', this)">
+          <span class="dot" style="background:#9E472A;"></span> 2. Budaya (Kearifan Lokal)
+        </button>
+        <button class="theme-tab-btn" data-theme="cerdas" onclick="selectTheme('cerdas', this)">
+          <span class="dot" style="background:#1B5299;"></span> 3. Cerdas (Pendidikan)
+        </button>
+        <button class="theme-tab-btn" data-theme="peduli" onclick="selectTheme('peduli', this)">
+          <span class="dot" style="background:#BA3C4A;"></span> 4. Peduli (Sosial/Kesehatan)
+        </button>
+        <button class="theme-tab-btn" data-theme="berdaya" onclick="selectTheme('berdaya', this)">
+          <span class="dot" style="background:#55286F;"></span> 5. Berdaya (UMKM/Ekonomi)
+        </button>
+      </div>
+    </div>
+
+    <header class="master-banner" id="banner-box">
+      <div class="banner-badge" id="banner-badge">Identitas Payung Utama • Gelar Karya Expo 2026</div>
+      <h1 class="banner-title" id="banner-title">Nawasena Nusantara</h1>
+      <p class="banner-desc" id="banner-desc">
+        Jangkar visual tertinggi kepemimpinan pemuda nusantara. Mengombinasikan keteguhan maritim samudera khatulistiwa, darah patriotik merah-putih, dan fajar emas kejayaan generasi baru.
+      </p>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">Spesifikasi 4 Warna Palet</h2>
+        <p class="panel-sub">Standarisasi nilai kode HEX, RGB, CMYK (khusus cetak offset/digital), serta peran dalam hirarki visual</p>
+      </div>
+
+      <div class="swatches-grid" id="swatches-container"></div>
+
+      <div class="ratio-wrapper" id="ratio-box">
+        <div class="ratio-bar">
+          <div class="ratio-seg" id="seg-tint" style="width:60%;" title="60% Latar Bersih"></div>
+          <div class="ratio-seg" id="seg-prim" style="width:25%;" title="25% Warna Utama"></div>
+          <div class="ratio-seg" id="seg-sec" style="width:10%;" title="10% Warna Pendukung"></div>
+          <div class="ratio-seg" id="seg-acc" style="width:5%;" title="5% Aksen / CTA"></div>
+        </div>
+        <div class="ratio-legend-row">
+          <div class="ratio-legend-item"><span class="ratio-dot" id="dot-tint"></span> <strong>60% Latar Bersih</strong> (<span id="leg-tint">Tint</span>)</div>
+          <div class="ratio-legend-item"><span class="ratio-dot" id="dot-prim"></span> <strong>25% Judul & Struktur</strong> (<span id="leg-prim">Primary</span>)</div>
+          <div class="ratio-legend-item"><span class="ratio-dot" id="dot-sec"></span> <strong>10% Kartu & Ilustrasi</strong> (<span id="leg-sec">Secondary</span>)</div>
+          <div class="ratio-legend-item"><span class="ratio-dot" id="dot-acc"></span> <strong>5% Tombol & Badge CTA</strong> (<span id="leg-acc">Accent</span>)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">Aturan Penggunaan Warna (Usage Guidelines)</h2>
+        <p class="panel-sub">Standarisasi keterbacaan (WCAG AA), proporsi layout, dan pantangan desain agar seragam di seluruh kelompok</p>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule-box rule-box-do">
+          <div class="rule-box-title">Aturan yang Dianjurkan (Best Practices)</div>
+          <ul class="rule-list">
+            <li>Gunakan warna <strong>Tint / Latar</strong> sebesar 60% sebagai kanvas agar mata audiens tidak lelah membaca modul/poster.</li>
+            <li>Gunakan warna <strong>Primary</strong> untuk teks judul utama (Heading 1 & 2) guna menjaga kontras minimal 7:1 di atas latar terang.</li>
+            <li>Warna <strong>Accent</strong> hanya digunakan untuk elemen yang membutuhkan tindakan langsung (tombol pendaftaran, angka metrik).</li>
+            <li>Teks di atas latar Primary wajib menggunakan warna putih bersih (#FFFFFF) demi keterbacaan tajam.</li>
+          </ul>
+        </div>
+
+        <div class="rule-box rule-box-dont">
+          <div class="rule-box-title">Pantangan Desain (Avoid / Don'ts)</div>
+          <ul class="rule-list">
+            <li>Dilarang menggunakan warna <strong>Accent</strong> sebagai latar belakang seluruh halaman atau body text paragraf panjang.</li>
+            <li>Hindari menumpuk teks warna Secondary di atas warna Primary karena kontrasnya terlalu redup (kurang dari 3:1).</li>
+            <li>Jangan menambahkan efek gradien pelangi atau drop-shadow berlebih yang membuat teks kabur saat dicetak.</li>
+            <li>Jangan mengubah saturasi atau kecerahan warna tanpa mengikuti standar HEX/CMYK yang ditentukan.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">Panduan Singkat 4 Format Media Umum</h2>
+        <p class="panel-sub">Rangkuman peran warna pokok pada format media presentasi dan promosi</p>
+      </div>
+
+      <div class="app-guidelines-grid">
+        <div class="app-item">
+          <div class="app-item-title">📱 Feed Instagram (1:1)</div>
+          <div class="app-item-desc">Frame memakai <strong>Primary</strong>, teks judul putih tebal, aksen badge memakai <strong>Accent</strong>.</div>
+        </div>
+        <div class="app-item">
+          <div class="app-item-title">🪧 X-Banner & Stand Expo</div>
+          <div class="app-item-desc">Header memakai <strong>Primary</strong>, konten inti berlatar <strong>Tint</strong> agar teks terbaca dari jarak jauh.</div>
+        </div>
+        <div class="app-item">
+          <div class="app-item-title">🪪 ID Card & Lanyard</div>
+          <div class="app-item-desc">Tali lanyard dan badge peran memakai <strong>Secondary</strong>, kartu berlatar <strong>Tint</strong>.</div>
+        </div>
+        <div class="app-item">
+          <div class="app-item-title">📊 Slide Presentasi (PPT)</div>
+          <div class="app-item-desc">Latar slide <strong>Tint</strong>, teks judul <strong>Primary</strong>, bullet penanda poin <strong>Accent</strong>.</div>
+        </div>
+      </div>
+    </section>
+    <!-- 9 CONTOH DESAIN PENERAPAN TEMA UTAMA -->
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">9 Contoh Desain Penggunaan Warna Tema Utama</h2>
+        <p class="panel-sub">Simulasi visual penerapan palet Nawasena Nusantara (Samudera Bahari, Marun Pusaka, Surya Kencana, Svarna Kapur) pada 9 materi publikasi dan perlengkapan expo</p>
+      </div>
+
+      <div class="mockups-grid-9">
+        <!-- 01. Backdrop Panggung -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">01. Backdrop Panggung</span>
+            <span class="mockup-format">16:9 LED / Flexi</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, #071224 0%, #0B1B33 60%, #15253d 100%); border-radius:10px; padding:12px; display:flex; flex-direction:column; justify-content:space-between; color:#fff; border:1px solid #1E293B; box-shadow:0 4px 12px rgba(0,0,0,0.3); position:relative; overflow:hidden;">
+              <div style="position:absolute; right:-20px; top:-20px; width:90px; height:90px; border-radius:50%; background:radial-gradient(circle, rgba(229,169,60,0.15), transparent 70%);"></div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:7.5px; font-weight:700; letter-spacing:1px; color:#E5A93C; text-transform:uppercase;">GELAR KARYA 2026</span>
+                <span style="font-size:7px; background:#871F27; padding:1px 5px; border-radius:3px; font-weight:600;">INDONESIA EMAS</span>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:13px; font-weight:800; font-family:var(--font-display); letter-spacing:-0.2px; color:#FFFFFF; line-height:1.2;">NAWASENA NUSANTARA</div>
+                <div style="font-size:7.5px; color:#CBD5E1; margin-top:2px;">Menyalakan Fajar Inovasi Pemuda untuk Peradaban Bangsa</div>
+              </div>
+              <div style="display:flex; justify-content:center; gap:5px;">
+                <span style="font-size:7px; background:#E5A93C; color:#0B1B33; padding:2px 8px; border-radius:99px; font-weight:800;">EXPO & TALKSHOW</span>
+              </div>
+              <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #871F27, #E5A93C, #871F27);"></div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Backdrop Panggung Expo</div>
+            <div class="mockup-role-desc">Dominan <strong>Samudera Bahari (#0B1B33)</strong> sebagai pilar wibawa panggung. Tipografi aksen memakai <strong>Surya Kencana (#E5A93C)</strong> agar berkilau di bawah lampu sorot.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 65%</span>
+              <span class="chip" style="background:#E5A93C; color:#0B1B33;">Gold 20%</span>
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 15%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02. Booklet Panduan -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">02. Cover Booklet Acara</span>
+            <span class="mockup-format">A5 Portrait (Cetak)</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:130px; height:180px; background:#FAF8F5; border:1px solid #E2E8F0; border-radius:8px; box-shadow:3px 5px 14px rgba(0,0,0,0.12); display:flex; flex-direction:column; overflow:hidden; position:relative;">
+              <div style="background:#0B1B33; padding:12px 10px; color:#fff; text-align:center;">
+                <div style="width:18px; height:18px; margin:0 auto 4px; border:1.5px solid #E5A93C; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:9px;">✦</div>
+                <div style="font-size:7px; letter-spacing:1px; color:#E5A93C; font-weight:700;">BUKU PANDUAN</div>
+                <div style="font-size:9.5px; font-weight:800; font-family:var(--font-display); line-height:1.2; margin-top:2px;">NAWASENA</div>
+              </div>
+              <div style="height:3px; background:#871F27;"></div>
+              <div style="padding:10px; flex-grow:1; display:flex; flex-direction:column; justify-content:space-between;">
+                <div style="font-size:7px; color:#475569; line-height:1.4;">
+                  <strong>Katalog Ekshibisi</strong><br>
+                  • 5 Klaster Kepemimpinan<br>
+                  • Jadwal Sidang Pleno<br>
+                  • Profil 25 Inisiator
+                </div>
+                <div style="border-top:1px dashed #CBD5E1; padding-top:4px; display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size:6px; color:#64748B;">Oktober 2026</span>
+                  <span style="font-size:6.5px; font-weight:700; color:#871F27;">Edisi I</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Buku Panduan & Katalog</div>
+            <div class="mockup-role-desc">Badan sampul memakai <strong>Svarna Kapur (#FAF8F5)</strong> untuk kesan kertas seni organik, dikunci tajam dengan strip <strong>Marun Pusaka (#871F27)</strong>.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 60%</span>
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 30%</span>
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 10%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03. Sertifikat Penghargaan -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">03. Sertifikat Penghargaan</span>
+            <span class="mockup-format">A4 Landscape</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:100%; aspect-ratio:1.41/1; background:#FAF8F5; border:3px double #E5A93C; border-radius:6px; padding:10px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 3px 10px rgba(0,0,0,0.1); position:relative;">
+              <div style="text-align:center;">
+                <div style="font-size:6.5px; font-weight:700; letter-spacing:1px; color:#871F27; text-transform:uppercase;">PIAGAM APRESIASI RESMI</div>
+                <div style="font-size:11px; font-weight:800; font-family:var(--font-display); color:#0B1B33; margin-top:1px;">SERTIFIKAT PENGHARGAAN</div>
+              </div>
+              <div style="text-align:center; padding:0 10px;">
+                <div style="font-size:6px; color:#64748B;">Diberikan dengan penuh hormat kepada:</div>
+                <div style="font-size:9px; font-weight:800; color:#0B1B33; border-bottom:1px solid #E5A93C; display:inline-block; padding:0 8px 1px; margin-top:2px;">INISIATOR PROYEK TERBAIK</div>
+                <div style="font-size:5.5px; color:#64748B; margin-top:3px;">Atas dedikasi kepemimpinan berdampak nyata pada Gelar Karya Nawasena Nusantara.</div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; padding:0 6px;">
+                <div style="text-align:center; width:45px; border-top:0.8px solid #94A3B8; font-size:5px; color:#64748B; padding-top:1px;">Ketua Panitia</div>
+                <div style="width:22px; height:22px; border-radius:50%; background:#871F27; border:1.5px solid #E5A93C; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:9px; box-shadow:0 1px 4px rgba(0,0,0,0.2);">★</div>
+                <div style="text-align:center; width:45px; border-top:0.8px solid #94A3B8; font-size:5px; color:#64748B; padding-top:1px;">Direktur Program</div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Sertifikat Penghargaan</div>
+            <div class="mockup-role-desc">Frame ganda <strong>Surya Kencana (#E5A93C)</strong> melambangkan prestise, stempel timbul <strong>Marun Pusaka</strong>, di atas kanvas bersih <strong>Svarna Kapur</strong>.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 70%</span>
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 15%</span>
+              <span class="chip" style="background:#E5A93C; color:#0B1B33;">Gold 15%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04. Feed Instagram -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">04. Feed Instagram Post</span>
+            <span class="mockup-format">1:1 Square (Digital)</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:160px; height:160px; background:#0B1B33; border-radius:10px; padding:12px; display:flex; flex-direction:column; justify-content:space-between; color:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.18); position:relative; overflow:hidden;">
+              <div style="position:absolute; top:0; right:0; width:60px; height:60px; background:linear-gradient(225deg, rgba(229,169,60,0.25), transparent); border-radius:0 0 0 100%;"></div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:7px; background:#871F27; padding:2px 6px; border-radius:4px; font-weight:700;">H-7 EXPO</span>
+                <span style="font-size:6.5px; color:#E5A93C; font-weight:700;">@nawasena.id</span>
+              </div>
+              <div>
+                <div style="font-size:6.5px; color:#E2E8F0; text-transform:uppercase; letter-spacing:0.5px;">GELAR KARYA 2026</div>
+                <div style="font-size:12px; font-weight:800; font-family:var(--font-display); line-height:1.2; margin-top:2px;">INSPIRASI DARI NUSANTARA</div>
+                <div style="font-size:7px; color:#CBD5E1; margin-top:3px;">25 inovasi sosial karya pemimpin muda.</div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.06); padding:4px 8px; border-radius:6px; border:1px solid rgba(229,169,60,0.3);">
+                <span style="font-size:6.5px; color:#fff; font-weight:600;">24-26 Okt 2026</span>
+                <span style="font-size:6.5px; background:#E5A93C; color:#0B1B33; padding:2px 6px; border-radius:4px; font-weight:800;">Lihat Detail ➔</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Feed Instagram Announcement</div>
+            <div class="mockup-role-desc">Frame solid <strong>#0B1B33</strong> agar menonjol di feed explore Instagram, badge urgensi <strong>#871F27</strong>, dan tombol CTA <strong>#E5A93C</strong> yang eye-catching.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 70%</span>
+              <span class="chip" style="background:#E5A93C; color:#0B1B33;">Gold 20%</span>
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 10%</span>
+            </div>
+          </div>
+        </div>
+        <!-- 05. Roll-up X-Banner -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">05. X-Banner Selamat Datang</span>
+            <span class="mockup-format">60x160 cm Vertikal</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:85px; height:185px; background:#FAF8F5; border:1px solid #CBD5E1; border-radius:4px; box-shadow:2px 4px 10px rgba(0,0,0,0.15); display:flex; flex-direction:column; overflow:hidden; position:relative;">
+              <div style="background:#0B1B33; padding:8px 6px; color:#fff; text-align:center;">
+                <div style="font-size:5px; color:#E5A93C; letter-spacing:0.8px; font-weight:700;">SELAMAT DATANG</div>
+                <div style="font-size:7.5px; font-weight:800; font-family:var(--font-display); line-height:1.1; margin-top:2px;">GELAR KARYA</div>
+                <div style="font-size:6px; color:#E2E8F0;">NAWASENA</div>
+              </div>
+              <div style="height:2px; background:#871F27;"></div>
+              <div style="padding:6px 5px; flex-grow:1; display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                  <div style="font-size:5px; font-weight:700; color:#871F27; text-transform:uppercase;">5 Zona Pameran:</div>
+                  <div style="font-size:4.5px; color:#334155; margin-top:3px; line-height:1.4;">
+                    • 1. Nawasena Lestari<br>
+                    • 2. Nawasena Budaya<br>
+                    • 3. Nawasena Cerdas<br>
+                    • 4. Nawasena Peduli<br>
+                    • 5. Nawasena Berdaya
+                  </div>
+                </div>
+                <div style="text-align:center; background:#EDF2F7; padding:4px 2px; border-radius:3px;">
+                  <div style="width:20px; height:20px; background:#0B1B33; margin:0 auto; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:6px; border:1px solid #E5A93C;">QR</div>
+                  <div style="font-size:4px; color:#64748B; margin-top:2px;">Scan E-Buku Panduan</div>
+                </div>
+              </div>
+              <div style="background:#0B1B33; height:5px;"></div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">X-Banner Foyer Pameran</div>
+            <div class="mockup-role-desc">Tegak memanjang dengan hirarki kontras tinggi: kepala banner <strong>#0B1B33</strong> terbaca dari 5 meter, badan <strong>#FAF8F5</strong> memuat info zona.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 65%</span>
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 25%</span>
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 10%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06. ID Card & Lanyard -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">06. ID Card & Lanyard</span>
+            <span class="mockup-format">B1 Akreditasi Event</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="display:flex; flex-direction:column; align-items:center;">
+              <div style="width:14px; height:32px; background:#871F27; display:flex; align-items:center; justify-content:center; color:#fff; font-size:4.5px; writing-mode:vertical-rl; letter-spacing:0.5px; border-radius:2px 2px 0 0; box-shadow:inset 0 0 4px rgba(0,0,0,0.3);">
+                NAWASENA
+              </div>
+              <div style="width:10px; height:6px; background:#CBD5E1; border-radius:2px; margin-bottom:-2px; z-index:2;"></div>
+              <div style="width:100px; height:140px; background:#FAF8F5; border:1px solid #CBD5E1; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.15); display:flex; flex-direction:column; overflow:hidden; position:relative;">
+                <div style="background:#0B1B33; padding:6px; text-align:center; color:#fff;">
+                  <div style="font-size:5px; color:#E5A93C; font-weight:700;">GELAR KARYA 2026</div>
+                  <div style="font-size:7px; font-weight:800; font-family:var(--font-display);">NAWASENA</div>
+                </div>
+                <div style="padding:8px 6px; display:flex; flex-direction:column; align-items:center; flex-grow:1; justify-content:space-between;">
+                  <div style="width:36px; height:42px; background:#E2E8F0; border:1px solid #CBD5E1; border-radius:4px; display:flex; align-items:center; justify-content:center; color:#94A3B8; font-size:12px;">👤</div>
+                  <div style="text-align:center;">
+                    <div style="font-size:7px; font-weight:800; color:#0B1B33;">ARYA KUSUMA</div>
+                    <div style="font-size:5px; color:#64748B;">Divisi Acara & Kurasi</div>
+                  </div>
+                  <div style="background:#871F27; color:#fff; font-size:5.5px; font-weight:700; padding:2px 10px; border-radius:99px; text-transform:uppercase; letter-spacing:0.5px;">PANITIA INTI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">ID Card & Tali Lanyard</div>
+            <div class="mockup-role-desc">Tali lanyard memakai <strong>Marun Pusaka (#871F27)</strong> agar mudah diidentifikasi sekuriti & pengunjung, kartu identitas bersih berlatar <strong>#FAF8F5</strong>.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 40%</span>
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 40%</span>
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 20%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07. Slide Keynote Presentation -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">07. Slide Presentasi</span>
+            <span class="mockup-format">16:9 Pitch Deck</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:100%; aspect-ratio:16/9; background:#FAF8F5; border:1px solid #CBD5E1; border-radius:8px; padding:10px 12px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 3px 10px rgba(0,0,0,0.1); position:relative; overflow:hidden;">
+              <div style="position:absolute; top:0; left:0; width:100%; height:3px; background:linear-gradient(90deg, #0B1B33, #871F27, #E5A93C);"></div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <div style="font-size:5.5px; color:#871F27; font-weight:700; text-transform:uppercase;">EVALUASI PROYEK KEPEMIMPINAN</div>
+                  <div style="font-size:9px; font-weight:800; font-family:var(--font-display); color:#0B1B33;">Capaian Dampak Nyata 2026</div>
+                </div>
+                <span style="font-size:6px; color:#94A3B8; font-family:monospace;">Slide 08</span>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin:4px 0;">
+                <div style="background:#fff; border:1px solid #E2E8F0; padding:6px 4px; border-radius:5px; text-align:center;">
+                  <div style="font-size:11px; font-weight:800; color:#0B1B33; font-family:var(--font-display);">1,250+</div>
+                  <div style="font-size:5px; color:#64748B;">Penerima Manfaat</div>
+                </div>
+                <div style="background:#fff; border:1px solid #E2E8F0; padding:6px 4px; border-radius:5px; text-align:center;">
+                  <div style="font-size:11px; font-weight:800; color:#871F27; font-family:var(--font-display);">5 Bidang</div>
+                  <div style="font-size:5px; color:#64748B;">Inisiatif Sosial</div>
+                </div>
+                <div style="background:#fff; border:1px solid #E2E8F0; padding:6px 4px; border-radius:5px; text-align:center;">
+                  <div style="font-size:11px; font-weight:800; color:#E5A93C; font-family:var(--font-display);">100%</div>
+                  <div style="font-size:5px; color:#64748B;">Target Eksekusi</div>
+                </div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #E2E8F0; padding-top:2px;">
+                <span style="font-size:5px; color:#64748B;">Nawasena Nusantara Expo</span>
+                <span style="font-size:5px; color:#0B1B33; font-weight:700;">www.nawasena.id</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Slide Laporan / Pitch Deck</div>
+            <div class="mockup-role-desc">Latar putih gading <strong>#FAF8F5</strong> menjamin kenyamanan mata pembaca di layar proyektor, angka metrik ditonjolkan dengan palet aksen.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 70%</span>
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 20%</span>
+              <span class="chip" style="background:#E5A93C; color:#0B1B33;">Gold 10%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 08. Kaos Polo & Totebag Merchandise -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">08. Merchandise & Apparel</span>
+            <span class="mockup-format">Polo Shirt & Totebag</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="display:flex; gap:10px; align-items:center; justify-content:center;">
+              <!-- Polo Shirt Simulator -->
+              <div style="width:75px; height:105px; background:#0B1B33; border-radius:8px 8px 4px 4px; padding:6px; box-shadow:0 3px 8px rgba(0,0,0,0.2); position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:center;">
+                <div style="width:30px; height:10px; background:#871F27; border-radius:0 0 6px 6px; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:4px;">▼</div>
+                <div style="position:absolute; top:24px; left:12px; width:10px; height:10px; border-radius:50%; border:1px solid #E5A93C; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:5px;">✦</div>
+                <div style="margin-top:auto; font-size:4.5px; color:#94A3B8; text-align:center;">Kaos Panitia</div>
+              </div>
+              <!-- Totebag Simulator -->
+              <div style="width:65px; height:90px; background:#FAF8F5; border:1px solid #CBD5E1; border-radius:3px; padding:6px; box-shadow:0 3px 8px rgba(0,0,0,0.1); position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <div style="position:absolute; top:-14px; width:26px; height:14px; border:2px solid #871F27; border-bottom:none; border-radius:10px 10px 0 0;"></div>
+                <div style="width:20px; height:20px; border-radius:50%; background:#0B1B33; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:8px;">✦</div>
+                <div style="font-size:5px; font-weight:800; color:#0B1B33; margin-top:4px;">NAWASENA</div>
+                <div style="font-size:4px; color:#871F27; font-weight:600;">Goodie Bag Expo</div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Polo Shirt & Totebag Souvenir</div>
+            <div class="mockup-role-desc">Polo shirt memakai kain <strong>#0B1B33</strong> dengan bordir emas dan kerah marun; totebag kanvas alami <strong>#FAF8F5</strong> dengan sablon navy.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 50%</span>
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 35%</span>
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 15%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 09. Kop Surat & Dokumen Resmi -->
+        <div class="mockup-item">
+          <div class="mockup-top-bar">
+            <span class="mockup-badge">09. Dokumen & Kop Surat</span>
+            <span class="mockup-format">A4 Resmi (Stationery)</span>
+          </div>
+          <div class="mockup-preview-zone">
+            <div style="width:125px; height:175px; background:#FAF8F5; border:1px solid #CBD5E1; border-radius:4px; padding:8px; box-shadow:0 3px 10px rgba(0,0,0,0.12); display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
+              <div>
+                <div style="display:flex; align-items:center; gap:5px; border-bottom:1.5px solid #0B1B33; padding-bottom:4px;">
+                  <div style="width:14px; height:14px; background:#0B1B33; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#E5A93C; font-size:7px; font-weight:800;">N</div>
+                  <div style="line-height:1.1;">
+                    <div style="font-size:6px; font-weight:800; color:#0B1B33;">PANITIA GELAR KARYA</div>
+                    <div style="font-size:4.5px; color:#871F27; font-weight:700;">NAWASENA NUSANTARA 2026</div>
+                  </div>
+                </div>
+                <div style="margin-top:6px; line-height:1.5;">
+                  <div style="width:40%; height:3px; background:#CBD5E1; margin-bottom:3px; border-radius:1px;"></div>
+                  <div style="width:85%; height:2.5px; background:#E2E8F0; margin-bottom:2px; border-radius:1px;"></div>
+                  <div style="width:95%; height:2.5px; background:#E2E8F0; margin-bottom:2px; border-radius:1px;"></div>
+                  <div style="width:75%; height:2.5px; background:#E2E8F0; margin-bottom:2px; border-radius:1px;"></div>
+                  <div style="width:90%; height:2.5px; background:#E2E8F0; margin-bottom:2px; border-radius:1px;"></div>
+                </div>
+              </div>
+              <div style="position:absolute; right:15px; bottom:25px; width:22px; height:22px; border-radius:50%; border:1px solid rgba(135,31,39,0.3); display:flex; align-items:center; justify-content:center; color:#871F27; font-size:6px; font-weight:800; transform:rotate(-15deg);">
+                SEAL
+              </div>
+              <div style="border-top:0.8px solid #CBD5E1; padding-top:2px; display:flex; justify-content:space-between; font-size:4.5px; color:#94A3B8;">
+                <span>Sekretariat Kepemimpinan</span>
+                <span>Dokumen Sah</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-name">Kop Surat & Lembar Disposisi</div>
+            <div class="mockup-role-desc">Tata letak formal kementerian/organisasi: garis kepala biru tua dan marun pusaka, stempel resmi marun, di atas kertas bertekstur <strong>#FAF8F5</strong>.</div>
+            <div class="mockup-chips">
+              <span class="chip" style="background:#FAF8F5; color:#0B1B33; border:1px solid #CBD5E1;">Kapur 85%</span>
+              <span class="chip" style="background:#0B1B33; color:#fff;">Navy 10%</span>
+              <span class="chip" style="background:#871F27; color:#fff;">Maroon 5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    const subthemes = {
+      master: {
+        title: "Nawasena Nusantara (Induk)",
+        badge: "Identitas Payung Utama • Gelar Karya Expo 2026",
+        desc: "Jangkar visual tertinggi kepemimpinan pemuda nusantara. Mengombinasikan keteguhan maritim samudera khatulistiwa, darah patriotik merah-putih, dan fajar emas kejayaan generasi baru.",
+        gradient: "linear-gradient(135deg, #071224 0%, #0B1B33 45%, #182C4A 75%, #6B151C 100%)",
+        badgeBg: "rgba(229, 169, 60, 0.25)",
+        badgeText: "#F8D58B",
+        tintBg: "#FAF8F5",
+        tintBorder: "#E8E2D6",
+        swatches: [
+          {
+            name: "Samudera Bahari",
+            role: "Primary (25%)",
+            hex: "#0B1B33",
+            cmyk: "RGB: 11, 27, 51 • CMYK: 92, 78, 48, 56",
+            phil: "Mewakili maritim kepulauan nusantara, stabilitas kepemimpinan, integritas etis, dan logika jernih.",
+            bg: "#0B1B33",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Marun Pusaka",
+            role: "Secondary (10%)",
+            hex: "#871F27",
+            cmyk: "RGB: 135, 31, 39 • CMYK: 27, 98, 85, 29",
+            phil: "Mewakili ketegasan, keberanian, darah perjuangan, dan akar tradisi merah-putih yang luhur.",
+            bg: "#871F27",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Surya Kencana",
+            role: "Accent (5%)",
+            hex: "#E5A93C",
+            cmyk: "RGB: 229, 169, 60 • CMYK: 10, 34, 88, 0",
+            phil: "Mewakili makna Nawasena (fajar masa depan gemilang), pencerahan nurani, dan optimisme bangsa.",
+            bg: "#E5A93C",
+            fg: "#0B1B33",
+            badgeBg: "rgba(11,27,51,0.25)",
+            badgeFg: "#0B1B33"
+          },
+          {
+            name: "Svarna Kapur",
+            role: "Tint / Latar (60%)",
+            hex: "#FAF8F5",
+            cmyk: "RGB: 250, 248, 245 • CMYK: 2, 2, 3, 0",
+            phil: "Mewakili kertas serat alami dan kesucian niat, memberikan ruang napas yang elegan dan ramah mata.",
+            bg: "#FAF8F5",
+            fg: "#0B1B33",
+            border: "1px solid #E8E2D6",
+            badgeBg: "#0B1B33",
+            badgeFg: "#FAF8F5"
+          }
+        ]
+      },
+      lestari: {
+        title: "Nawasena Lestari",
+        badge: "Fokus: Lingkungan Hidup & Keberlanjutan",
+        desc: "Identitas visual untuk proyek konservasi alam, ketahanan ekologi, zero waste, dan aksi hijau. Memadukan keteduhan hutan hujan tropis nusantara dengan kesegaran pucuk daun dan energi matahari.",
+        gradient: "linear-gradient(135deg, #0d3826 0%, #1B5E43 50%, #3d7054 80%, #528E6E 100%)",
+        badgeBg: "rgba(212, 230, 52, 0.22)",
+        badgeText: "#d8ea3d",
+        tintBg: "#F2F8F4",
+        tintBorder: "#C8E6D3",
+        swatches: [
+          {
+            name: "Rimba Emerald",
+            role: "Primary (25%)",
+            hex: "#1B5E43",
+            cmyk: "RGB: 27, 94, 67 • CMYK: 86, 36, 75, 29",
+            phil: "Mewakili kanopi hutan hujan nusantara, keteguhan ekosistem alami, dan keseimbangan iklim.",
+            bg: "#1B5E43",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Pucuk Sage",
+            role: "Secondary (10%)",
+            hex: "#528E6E",
+            cmyk: "RGB: 82, 142, 110 • CMYK: 66, 24, 58, 4",
+            phil: "Mewakili tunas baru, regenerasi lingkungan yang pulih, dan kesinambungan kehidupan hijau.",
+            bg: "#528E6E",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Surya Vitalis",
+            role: "Accent (5%)",
+            hex: "#D4E634",
+            cmyk: "RGB: 212, 230, 52 • CMYK: 22, 0, 88, 0",
+            phil: "Mewakili energi terbarukan, fotosintesis, dan dorongan aksi aktif pemuda penjaga bumi.",
+            bg: "#D4E634",
+            fg: "#1B5E43",
+            badgeBg: "rgba(27,94,67,0.2)",
+            badgeFg: "#1B5E43"
+          },
+          {
+            name: "Embun Hutan",
+            role: "Tint / Latar (60%)",
+            hex: "#F2F8F4",
+            cmyk: "RGB: 242, 248, 244 • CMYK: 3, 0, 2, 0",
+            phil: "Mewakili kesegaran udara pagi di alam bebas, memberikan kanvas membaca yang sejuk dan rileks.",
+            bg: "#F2F8F4",
+            fg: "#1B5E43",
+            border: "1px solid #C8E6D3",
+            badgeBg: "#1B5E43",
+            badgeFg: "#F2F8F4"
+          }
+        ]
+      },
+      budaya: {
+        title: "Nawasena Budaya",
+        badge: "Fokus: Kebudayaan & Kearifan Lokal",
+        desc: "Identitas visual untuk pelestarian warisan leluhur, seni pertunjukan tradisi, wastra nusantara, dan revitalisasi sejarah. Menghadirkan kehangatan tanah peradaban nusantara dan keagungan tenun tradisi.",
+        gradient: "linear-gradient(135deg, #612211 0%, #9E472A 50%, #54373a 80%, #2C3E5A 100%)",
+        badgeBg: "rgba(224, 159, 62, 0.25)",
+        badgeText: "#fcd18b",
+        tintBg: "#FAF6F0",
+        tintBorder: "#E6D7C8",
+        swatches: [
+          {
+            name: "Terakota Candi",
+            role: "Primary (25%)",
+            hex: "#9E472A",
+            cmyk: "RGB: 158, 71, 42 • CMYK: 25, 78, 90, 18",
+            phil: "Mewakili bata candi Majapahit, tanah liat gerabah tradisional, dan kehangatan bumi nusantara.",
+            bg: "#9E472A",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Nila Sogan",
+            role: "Secondary (10%)",
+            hex: "#2C3E5A",
+            cmyk: "RGB: 44, 62, 90 • CMYK: 83, 64, 38, 22",
+            phil: "Mewakili celupan pewarna alami daun tom/tarum pada wastra tenun ikat dan batik sogan keraton.",
+            bg: "#2C3E5A",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Kuning Kunyit Mas",
+            role: "Accent (5%)",
+            hex: "#E09F3E",
+            cmyk: "RGB: 224, 159, 62 • CMYK: 12, 40, 88, 0",
+            phil: "Mewakili rempah nusantara, perhiasan emas pusaka, dan kemegahan peradaban leluhur.",
+            bg: "#E09F3E",
+            fg: "#2C3E5A",
+            badgeBg: "rgba(44,62,90,0.2)",
+            badgeFg: "#2C3E5A"
+          },
+          {
+            name: "Kain Blacu Mori",
+            role: "Tint / Latar (60%)",
+            hex: "#FAF6F0",
+            cmyk: "RGB: 250, 246, 240 • CMYK: 2, 2, 5, 0",
+            phil: "Mewakili kain mori tenun mentah sebelum dibatik, memberi nuansa organik, hangat, dan antik.",
+            bg: "#FAF6F0",
+            fg: "#9E472A",
+            border: "1px solid #E6D7C8",
+            badgeBg: "#9E472A",
+            badgeFg: "#FAF6F0"
+          }
+        ]
+      },
+      cerdas: {
+        title: "Nawasena Cerdas",
+        badge: "Fokus: Pendidikan, Literasi, & Keterampilan",
+        desc: "Identitas visual untuk inovasi pembelajaran, pemberantasan buta aksara digital, bimbingan belajar kreatif, dan upskilling generasi muda. Menghadirkan kejernihan logika dan antusiasme penemuan baru.",
+        gradient: "linear-gradient(135deg, #0e305e 0%, #1B5299 50%, #28639e 80%, #3C91E6 100%)",
+        badgeBg: "rgba(247, 127, 0, 0.25)",
+        badgeText: "#ffb469",
+        tintBg: "#F2F6FC",
+        tintBorder: "#D0E1F9",
+        swatches: [
+          {
+            name: "Biru Cendekia",
+            role: "Primary (25%)",
+            hex: "#1B5299",
+            cmyk: "RGB: 27, 82, 153 • CMYK: 95, 72, 8, 1",
+            phil: "Mewakili kejernihan berpikir ilmiah, kedalaman ilmu pengetahuan, integritas akademis.",
+            bg: "#1B5299",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Langit Ide",
+            role: "Secondary (10%)",
+            hex: "#3C91E6",
+            cmyk: "RGB: 60, 145, 230 • CMYK: 71, 35, 0, 0",
+            phil: "Mewakili cakrawala eksplorasi tanpa batas, keterbukaan pikiran, dan visi kemajuan modern.",
+            bg: "#3C91E6",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Pijar Amber Ide",
+            role: "Accent (5%)",
+            hex: "#F77F00",
+            cmyk: "RGB: 247, 127, 0 • CMYK: 0, 60, 100, 0",
+            phil: "Mewakili percikan bohlam ide baru, daya cipta kreatif, dan semangat belajar siswa yang menyala.",
+            bg: "#F77F00",
+            fg: "#ffffff",
+            badgeBg: "rgba(0,0,0,0.3)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Kertas Bersih",
+            role: "Tint / Latar (60%)",
+            hex: "#F2F6FC",
+            cmyk: "RGB: 242, 246, 252 • CMYK: 4, 2, 0, 0",
+            phil: "Mewakili lembaran buku materi pelajaran baru, memberikan ruang lapang dan nyaman untuk membaca.",
+            bg: "#F2F6FC",
+            fg: "#1B5299",
+            border: "1px solid #D0E1F9",
+            badgeBg: "#1B5299",
+            badgeFg: "#F2F6FC"
+          }
+        ]
+      },
+      peduli: {
+        title: "Nawasena Peduli",
+        badge: "Fokus: Sosial, Kesehatan, & Kepedulian Masyarakat",
+        desc: "Identitas visual untuk aksi filantropi, posyandu gizi seimbang, kesadaran kesehatan mental, dan advokasi disabilitas. Menghadirkan rasa empati kemanusiaan yang tulus dan ketenangan penyembuhan.",
+        gradient: "linear-gradient(135deg, #6e1c26 0%, #BA3C4A 50%, #706367 80%, #2A9D8F 100%)",
+        badgeBg: "rgba(244, 162, 97, 0.25)",
+        badgeText: "#fed1b0",
+        tintBg: "#FDF6F6",
+        tintBorder: "#F5D3D6",
+        swatches: [
+          {
+            name: "Karuna Coral",
+            role: "Primary (25%)",
+            hex: "#BA3C4A",
+            cmyk: "RGB: 186, 60, 74 • CMYK: 19, 87, 65, 8",
+            phil: "Mewakili detak jantung kasih sayang (Karuna), kepedulian tulus, dan kehangatan rangkulan relawan.",
+            bg: "#BA3C4A",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Husada Teal",
+            role: "Secondary (10%)",
+            hex: "#2A9D8F",
+            cmyk: "RGB: 42, 157, 143 • CMYK: 77, 13, 47, 1",
+            phil: "Mewakili ketenangan medis, pemulihan kesehatan fisik-mental, higienitas, dan harapan sembuh.",
+            bg: "#2A9D8F",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Peluk Peach",
+            role: "Accent (5%)",
+            hex: "#F4A261",
+            cmyk: "RGB: 244, 162, 97 • CMYK: 2, 45, 66, 0",
+            phil: "Mewakili sentuhan keramahan, kelembutan senyum kader kesehatan, dan optimisme kesembuhan.",
+            bg: "#F4A261",
+            fg: "#6e1c26",
+            badgeBg: "rgba(110,28,38,0.2)",
+            badgeFg: "#6e1c26"
+          },
+          {
+            name: "Kapas Sentuhan",
+            role: "Tint / Latar (60%)",
+            hex: "#FDF6F6",
+            cmyk: "RGB: 253, 246, 246 • CMYK: 0, 3, 2, 0",
+            phil: "Mewakili perban kasa dan kapas lembut yang menenangkan, menghilangkan rasa takut dari lingkungan klinis.",
+            bg: "#FDF6F6",
+            fg: "#BA3C4A",
+            border: "1px solid #F5D3D6",
+            badgeBg: "#BA3C4A",
+            badgeFg: "#FDF6F6"
+          }
+        ]
+      },
+      berdaya: {
+        title: "Nawasena Berdaya",
+        badge: "Fokus: Pemberdayaan UMKM, Wirausaha, & Ekonomi Mandiri",
+        desc: "Identitas visual untuk program inkubasi UMKM desa, kemandirian finansial keluarga, peningkatan nilai tambah komoditas lokal, dan digitalisasi pasar. Menghadirkan wibawa kepemimpinan ekonomi dan kemakmuran.",
+        gradient: "linear-gradient(135deg, #321345 0%, #55286F 50%, #8c4c3b 80%, #D97706 100%)",
+        badgeBg: "rgba(245, 158, 11, 0.25)",
+        badgeText: "#ffd67b",
+        tintBg: "#FAF5FC",
+        tintBorder: "#E8D3F3",
+        swatches: [
+          {
+            name: "Ungu Adidaya",
+            role: "Primary (25%)",
+            hex: "#55286F",
+            cmyk: "RGB: 85, 40, 111 • CMYK: 74, 93, 26, 17",
+            phil: "Mewakili kedaulatan ekonomi, prestise produk lokal berdaya saing tinggi, dan kemandirian usaha.",
+            bg: "#55286F",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Emas Niaga",
+            role: "Secondary (10%)",
+            hex: "#D97706",
+            cmyk: "RGB: 217, 119, 6 • CMYK: 14, 62, 100, 2",
+            phil: "Mewakili hasil panen/usaha yang berlimpah, transaksi perdagangan yang sehat, dan peningkatan omset.",
+            bg: "#D97706",
+            fg: "#ffffff",
+            badgeBg: "rgba(255,255,255,0.25)",
+            badgeFg: "#ffffff"
+          },
+          {
+            name: "Surya Kencana",
+            role: "Accent (5%)",
+            hex: "#F59E0B",
+            cmyk: "RGB: 245, 158, 11 • CMYK: 2, 43, 98, 0",
+            phil: "Mewakili momentum pertumbuhan bisnis, inovasi produk bernilai tambah, dan optimisme pasar.",
+            bg: "#F59E0B",
+            fg: "#321345",
+            badgeBg: "rgba(50,19,69,0.25)",
+            badgeFg: "#321345"
+          },
+          {
+            name: "Pualam Violet",
+            role: "Tint / Latar (60%)",
+            hex: "#FAF5FC",
+            cmyk: "RGB: 250, 245, 252 • CMYK: 2, 4, 0, 0",
+            phil: "Mewakili etalase toko yang bersih, modern, dan berkelas tinggi untuk memajang produk lokal binaan.",
+            bg: "#FAF5FC",
+            fg: "#55286F",
+            border: "1px solid #E8D3F3",
+            badgeBg: "#55286F",
+            badgeFg: "#FAF5FC"
+          }
+        ]
+      }
+    };
+
+    function selectTheme(key, btnElem) {
+      const data = subthemes[key];
+      if (!data) return;
+
+      document.querySelectorAll('.theme-tab-btn').forEach(btn => btn.classList.remove('active'));
+      if (btnElem) {
+        btnElem.classList.add('active');
+      } else {
+        const defaultBtn = document.querySelector(`[data-theme="${key}"]`);
+        if (defaultBtn) defaultBtn.classList.add('active');
+      }
+
+      document.getElementById('label-active-status').innerText = "Tema: " + data.title;
+      document.getElementById('banner-box').style.background = data.gradient;
+      document.getElementById('banner-badge').innerText = data.badge;
+      document.getElementById('banner-badge').style.background = data.badgeBg;
+      document.getElementById('banner-badge').style.color = data.badgeText;
+      document.getElementById('banner-title').innerText = data.title;
+      document.getElementById('banner-desc').innerText = data.desc;
+
+      const cont = document.getElementById('swatches-container');
+      cont.innerHTML = data.swatches.map(s => `
+        <div class="swatch-card">
+          <div class="swatch-color-box" style="background:${s.bg}; color:${s.fg}; ${s.border ? 'border-bottom:' + s.border : ''}">
+            <span class="swatch-tag" style="background:${s.badgeBg}; color:${s.badgeFg};">${s.role}</span>
+          </div>
+          <div class="swatch-body">
+            <div class="swatch-name">${s.name}</div>
+            <div class="swatch-code">${s.hex}</div>
+            <div class="swatch-cmyk">${s.cmyk}</div>
+            <div class="swatch-phil">${s.phil}</div>
+          </div>
+        </div>
+      `).join('');
+
+      const p = data.swatches[0];
+      const s = data.swatches[1];
+      const a = data.swatches[2];
+      const t = data.swatches[3];
+
+      document.getElementById('ratio-box').style.background = data.tintBg;
+      document.getElementById('ratio-box').style.borderColor = data.tintBorder;
+
+      document.getElementById('seg-tint').style.background = t.bg;
+      document.getElementById('seg-tint').style.border = "1px solid #CBD5E1";
+      document.getElementById('seg-prim').style.background = p.bg;
+      document.getElementById('seg-sec').style.background = s.bg;
+      document.getElementById('seg-acc').style.background = a.bg;
+
+      document.getElementById('dot-tint').style.background = t.bg;
+      document.getElementById('dot-tint').style.border = "1px solid #CBD5E1";
+      document.getElementById('dot-prim').style.background = p.bg;
+      document.getElementById('dot-sec').style.background = s.bg;
+      document.getElementById('dot-acc').style.background = a.bg;
+
+      document.getElementById('leg-tint').innerText = t.name;
+      document.getElementById('leg-prim').innerText = p.name;
+      document.getElementById('leg-sec').innerText = s.name;
+      document.getElementById('leg-acc').innerText = a.name;
+    }
+
+    selectTheme('master');
+  </script>
+</body>
+</html>
